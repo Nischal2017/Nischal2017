@@ -1,0 +1,138 @@
+<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Golden glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Radial gradient for imperial gold -->
+    <radialGradient id="imperialGold" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:0.7" />
+    </radialGradient>
+  </defs>
+
+  <!-- Dark void background -->
+  <rect width="800" height="200" fill="#0a0a0a"/>
+
+  <!-- Main text with fade-in animation -->
+  <text
+    x="400"
+    y="110"
+    font-family="'Georgia', 'Times New Roman', serif"
+    font-size="48"
+    font-weight="bold"
+    text-anchor="middle"
+    fill="url(#imperialGold)"
+    filter="url(#glow)"
+    letter-spacing="3">
+    PRAISE THE GOD EMPEROR
+    <animate
+      attributeName="opacity"
+      from="0"
+      to="1"
+      dur="4s"
+      fill="freeze"/>
+  </text>
+
+  <!-- Secondary glow layer for depth -->
+  <text
+    x="400"
+    y="110"
+    font-family="'Georgia', 'Times New Roman', serif"
+    font-size="48"
+    font-weight="bold"
+    text-anchor="middle"
+    fill="#FFD700"
+    opacity="0.3"
+    letter-spacing="3">
+    PRAISE THE GOD EMPEROR
+    <animate
+      attributeName="opacity"
+      from="0"
+      to="0.3"
+      dur="4s"
+      fill="freeze"/>
+  </text>
+
+  <!-- Particle effects - scattered golden points -->
+  <g id="particles">
+    <!-- Top left cluster -->
+    <circle cx="50" cy="30" r="1.5" fill="#FFD700" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="3s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="cy" from="30" to="25" dur="3s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="80" cy="45" r="1" fill="#FFA500" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="2.5s" begin="0.3s" repeatCount="indefinite"/>
+      <animate attributeName="cy" from="45" to="40" dur="2.5s" begin="0.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="60" r="1.2" fill="#FFD700" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="2.8s" begin="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="cy" from="60" to="55" dur="2.8s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Top right cluster -->
+    <circle cx="750" cy="35" r="1.5" fill="#FFD700" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="3.2s" begin="0.2s" repeatCount="indefinite"/>
+      <animate attributeName="cy" from="35" to="30" dur="3.2s" begin="0.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="720" cy="50" r="1" fill="#FFA500" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="2.7s" begin="0.5s" repeatCount="indefinite"/>
+      <animate attributeName="cy" from="50" to="45" dur="2.7s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="680" cy="65" r="1.2" fill="#FFD700" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="2.9s" begin="0.8s" repeatCount="indefinite"/>
+      <animate attributeName="cy" from="65" to="60" dur="2.9s" begin="0.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Bottom left cluster -->
+    <circle cx="70" cy="170" r="1.5" fill="#FFD700" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="3.1s" begin="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="cy" from="170" to="175" dur="3.1s" begin="0.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="155" r="1" fill="#FFA500" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="2.6s" begin="0.7s" repeatCount="indefinite"/>
+      <animate attributeName="cy" from="155" to="160" dur="2.6s" begin="0.7s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Bottom right cluster -->
+    <circle cx="730" cy="165" r="1.5" fill="#FFD700" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="3.3s" begin="0.1s" repeatCount="indefinite"/>
+      <animate attributeName="cy" from="165" to="170" dur="3.3s" begin="0.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="150" r="1" fill="#FFA500" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="2.4s" begin="0.9s" repeatCount="indefinite"/>
+      <animate attributeName="cy" from="150" to="155" dur="2.4s" begin="0.9s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Center top particles -->
+    <circle cx="350" cy="40" r="1" fill="#FFD700" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="2.7s" begin="0.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="450" cy="45" r="1.2" fill="#FFA500" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="3s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Center bottom particles -->
+    <circle cx="370" cy="160" r="1" fill="#FFD700" opacity="0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="2.8s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="430" cy="165" r="1.2" fill="#FFA500" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="3.1s" begin="0.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Subtle pulsing glow behind text -->
+  <ellipse cx="400" cy="110" rx="400" ry="40" fill="#FFD700" opacity="0">
+    <animate
+      attributeName="opacity"
+      values="0;0.05;0.03"
+      dur="4s"
+      fill="freeze"/>
+  </ellipse>
+</svg>
